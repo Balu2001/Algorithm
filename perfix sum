@@ -1,0 +1,12 @@
+l=list(map(int,input("enter arr").split()))
+per=[]
+per.append(l[0])
+for i in range(1,len(l)):
+    per.append(per[i-1]+l[i])
+print(per)
+n,m=map(int,input("enter the range:").split())
+if n==0:
+  print(per[m])
+else:  
+  print(per[m]-per[n-1])
+    
