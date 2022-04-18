@@ -1,0 +1,14 @@
+import sys
+Int_max=-sys.maxsize-1
+def wi(arr,k,n):
+    max_sum=Int_max
+    for i in range(n-k+1):
+        cu_sum=0
+        for j in range(k):
+            cu_sum=cu_sum+arr[i+j]
+        max_arr=max(cu_sum,max_sum)
+    return max_arr
+arr=[1,2,3,4,55,6]
+n=6
+k=3
+print(wi(arr,k,n))
