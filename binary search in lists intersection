@@ -1,0 +1,31 @@
+#User function Template for python3
+
+class Solution:
+    def commonElements (self,A, B, C, n1, n2, n3):
+        # your code here
+        def bin(arr,ter):
+            l=0
+            h=len(arr)-1
+            while l<=h:
+                mid=(l+h)//2
+                if arr[mid] ==ter:
+                    return True
+                elif arr[mid]>ter:
+                    h=mid-1
+                else:
+                    l=mid+1
+            return False
+        binlist=[]
+        for i in A:
+            k=bin(B,i)
+            j=bin(C,i)
+            if k and j:
+                if i not in binlist:
+                    binlist.append(i)
+        
+        return binlist
+            
+                
+                
+                
+                    
